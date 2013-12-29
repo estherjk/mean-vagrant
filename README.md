@@ -54,4 +54,4 @@ See `bower.json` for more details
     * You can launch the node app in 2 ways:
         * Simply type `node app.js`
         * Or type `supervisor app.js`
-    * The app should be up and running!
+    * Navigate to `localhost:3000`. The app should be up and running!
