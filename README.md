@@ -42,7 +42,7 @@ See `bower.json` for more details
 1. Make sure you have VirtualBox and Vagrant installed (see Prerequisites)
 2. Clone this repository and `cd` into the directory
     * Launch the VM by typing `vagrant up`
-        * When this command is executed, the VM is initialized (see VM content)
+        * When this command is executed, the VM is initialized (see VM Environment)
         * Note that this step may take some time to complete
 3. SSH into the VM by typing `vagrant ssh`
     * The repository files on the host machine are also shared with the VM; type `cd /vagrant` to navigate to the shared folder
