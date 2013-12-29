@@ -1,0 +1,16 @@
+{
+  "name": "mean-vagrant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.7",
+    "jade": "1.0.0",
+    "mongoose": "3.8.3"
+  },
+  "devDependencies": {
+    "grunt": "0.4.2"
+  }
+}
