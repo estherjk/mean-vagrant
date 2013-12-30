@@ -1,6 +1,6 @@
 # mean-vagrant
 
-An Ubuntu 12.04 Vagrant VM (64-bit) for kickstarting web application development on the [MEAN](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and) stack
+An Ubuntu 12.04 Vagrant VM (64-bit) for developing web applications on the [MEAN](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and) stack
 
 ## Prerequisites
 
