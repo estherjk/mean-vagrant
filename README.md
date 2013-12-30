@@ -22,7 +22,7 @@ See `provision.sh` for more details
 
 ### Node packages
 
-* [ExpressJS](http://expressjs.com/): web application framework for node
+* [ExpressJS](http://expressjs.com/): web application framework for Node
 * [Jade](http://jade-lang.com/): Node template engine
 * [Mongoose](http://mongoosejs.com/): MongoDB object modeling for Node
 
@@ -46,12 +46,12 @@ See `bower.json` for more details
         * Note that this step may take some time to complete
 3. SSH into the VM by typing `vagrant ssh`
     * The repository files on the host machine are also shared with the VM; type `cd /vagrant` to navigate to the shared folder
-    * Install the node and bower packages
-        * To install the node packages, type `npm install`
-        * To install the bower packages, type `bower install`
+    * Install the Node and Bower packages
+        * To install the Node packages, type `npm install`
+        * To install the Bower packages, type `bower install`
     * Seed MongoDB with a sample user by typing `grunt dbseed` (see Gruntfile.js)
-4. Launch the node app
-    * You can launch the node app in 2 ways:
+4. Launch the Node app
+    * You can launch the Node app in 2 ways:
         * Simply type `node app.js`
         * Or type `supervisor app.js` to use the Node supervisor script
     * Navigate to `localhost:3000`. The app should be up and running!
