@@ -1,3 +1,5 @@
+// Reference: http://danielstudds.com/setting-up-passport-js-secure-spa-part-1/
+
 var db = require('./db');
 var User = require('./models/user');
 
