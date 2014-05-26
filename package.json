@@ -1,6 +1,6 @@
 {
   "name": "mean-vagrant",
-  "version": "0.1.0",
+  "version": "2.0",
   "private": true,
   "scripts": {
     "start": "node app.js"
