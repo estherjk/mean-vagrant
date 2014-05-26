@@ -3,6 +3,12 @@
  */
 
 var express = require('express')
+  , morgan = require('morgan')
+  , bodyParser = require('body-parser')
+  , cookieParser = require('cookie-parser')
+  , errorhandler = require('errorhandler')
+  , methodOverride = require('method-override')
+  , favicon = require('serve-favicon')
   , http = require('http')
   , path = require('path')
 
@@ -16,17 +22,17 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.cookieParser());
-app.use(express.bodyParser());
-app.use(express.methodOverride());
+//app.use(favicon()); // requires PATH to favicon
+app.use(morgan('dev'));
+app.use(cookieParser());
+app.use(bodyParser());
+app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(app.router);
 
 // development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+var env = process.env.NODE_ENV || 'development';
+if('development' == env) {
+   app.use(errorhandler());
 }
 
 // serve index and view partials
