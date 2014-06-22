@@ -1,6 +1,5 @@
 {
   "name": "mean-vagrant",
-  "version": "2.1",
   "private": true,
   "dependencies": {
     "angular": "1.2.16",
