@@ -2,7 +2,8 @@
 var express = require('express')
   , http = require('http')
   , mongoose = require('mongoose')
-  , morgan = require('morgan');
+  , morgan = require('morgan')
+  , bodyParser = require('body-parser');
 
 // configuration files
 var configDb = require('./config/db')
@@ -10,11 +11,17 @@ var configDb = require('./config/db')
 
 // app parameters
 var app = express();
-app.set('port', process.env.PORT || 3000); // set port
-app.use(morgan('dev')); // log every request to console
-app.use(express.static(configServer.staticFolder)); // set static files location
+app.set('port', process.env.PORT || 3000);
+app.use(express.static(configServer.staticFolder));
+app.use(morgan('dev'));
+app.use(bodyParser.json());
 
-// routes
+/// routes
+
+// API route
+app.use('/api', require('./routes/api'));
+
+// serve index: make sure this is the last route configured
 require('./routes').serveIndex(app, configServer.staticFolder);
 
 // MongoDB connection

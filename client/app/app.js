@@ -2,9 +2,11 @@
 
 angular.module('mean-vagrant', [
   'ngRoute',
-  'mean-vagrant.navbar',
-  'mean-vagrant.home',
-  'mean-vagrant.about'
+  'navbar',
+  'home',
+  'example',
+  'directives.mv-user-info',
+  'services.user'
 ]).
 config(function ($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);

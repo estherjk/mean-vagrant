@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('mean-vagrant.navbar', [
+angular.module('navbar', [
 ]).
 controller('NavCtrl', function ($scope, $location) {
   $scope.items = [
     { path: '/', title: 'Home' },
-    { path: '/about', title: 'About'}
+    { path: '/example', title: 'Example'}
   ];
 
   $scope.isActive = function (item) {

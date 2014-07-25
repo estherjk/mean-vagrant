@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean-vagrant.home', [
+angular.module('home', [
   'ngRoute'
 ]).
 config(function ($routeProvider) {
