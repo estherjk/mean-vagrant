@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "https://vagrantcloud.com/hashicorp/precise64/version/2/provider/virtualbox.box"
 
   # Provision VM with the specified shell script
-  config.vm.provision :shell, :path => "provision.sh"
+  config.vm.provision :shell, privileged: false, :path => "provision.sh"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
