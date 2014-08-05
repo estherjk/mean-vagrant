@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mean-vagrant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>mean-vagrant</title>
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/app.css">
+  </head>
+  <body>
+    <div ng-include="'/app/navbar/navbar.html'"></div>
+    <div ng-view class="container"></div>
+
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/app.js"></script>
+    <script type="text/javascript" src="/app/navbar/navbar.js"></script>
+    <script type="text/javascript" src="/app/home/home.js"></script>
+    <script type="text/javascript" src="/app/example/example.js"></script>
+    <script type="text/javascript" src="/app/common/directives/mv-user-info/mv-user-info.js"></script>
+    <script type="text/javascript" src="/app/common/services/user.js"></script>
+  </body>
+</html>

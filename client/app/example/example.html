@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>User Manager
+    <small>Inspired by
+      <a href="https://www.youtube.com/watch?v=FZSjvWtUxYk" target="_blank">Thomas Davis'</a>
+      Backbone.js Tutorial
+    </small>
+  </h1>
+</div>
+
+<a ng-href="/example/new-user" class="btn btn-primary" role="button">New</a>
+
+<div class="table-responsive table-users" ng-controller="UsersCtrl">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>City</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td ng-bind='user.firstName'></td>
+        <td ng-bind='user.lastName'></td>
+        <td ng-bind='user.city'></td>
+        <td>
+          <a ng-href='/example/edit-user/{{ user._id }}' class="btn btn-default btn-xs" role="button">
+            <i class="fa fa-pencil-square-o"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
