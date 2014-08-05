@@ -14,4 +14,4 @@ sudo apt-get update
 sudo apt-get install -y nodejs
 
 # install npm packages
-sudo npm install -g bower grunt-cli supervisor
+sudo npm install -g bower mocha supervisor

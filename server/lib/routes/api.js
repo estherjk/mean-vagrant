@@ -10,6 +10,16 @@ api.use(function (req, res, next) {
 });
 
 api.route('/users')
+  .post(function (req, res) {
+    User.addUser(req.body, function (err, user) {
+      if(err) {
+        res.status(500).send(err);
+      }
+      else {
+        res.json({ success: true, user: user });
+      }
+    });
+  })
   .get(function (req, res) {
     User.getUsers(function (err, users) {
       if(err) {
@@ -19,26 +29,16 @@ api.route('/users')
         res.json(users);
       }
     });
-  })
-  .post(function (req, res) {
-    User.addUser(req.body, function (err) {
-      if(err) {
-        res.status(500).send(err);
-      }
-      else {
-        res.json({ success: true });
-      }
-    });
   });
 
 api.route('/users/:id')
   .get(function (req, res) {
-    User.getUser(req.params.id, function(err, post) {
+    User.getUser(req.params.id, function (err, user) {
       if(err) {
         res.status(500).send(err);
       }
       else {
-        res.json(post);
+        res.json(user);
       }
     });
   })
