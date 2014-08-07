@@ -15,3 +15,7 @@ sudo apt-get install -y nodejs
 
 # install npm packages
 sudo npm install -g bower grunt-cli supervisor
+
+# clean npm cache to make sure npm install works locally
+# see https://github.com/npm/npm/issues/2773
+sudo npm cache clean

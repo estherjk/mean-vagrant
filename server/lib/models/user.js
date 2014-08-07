@@ -35,20 +35,20 @@ module.exports.addUser = function (info, callback) {
   var user = new User(info);
   user.save(function (err) {
     if(err) return callback(err);
-    callback(null);
+    callback(null, user);
   });
 };
 
 // update user
 module.exports.updateUser = function (id, info, callback) {
-  User.update({ _id: id }, info, function(err) {
+  User.update({ _id: id }, info, function (err) {
     if(err) return callback(err);
     callback(null);
   });
 };
 
 // remove user
-module.exports.removeUser= function (id, callback) {
+module.exports.removeUser = function (id, callback) {
   User.remove({ _id: id }, function (err) {
     if(err) return callback(err);
     callback(null);

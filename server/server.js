@@ -6,8 +6,8 @@ var express = require('express')
   , bodyParser = require('body-parser');
 
 // configuration files
-var configDb = require('./config/db')
-  , configServer = require('./config/server');
+var configDb = require('./lib/config/db')
+  , configServer = require('./lib/config/server');
 
 // app parameters
 var app = express();
@@ -19,10 +19,10 @@ app.use(bodyParser.json());
 /// routes
 
 // API route
-app.use('/api', require('./routes/api'));
+app.use('/api', require('./lib/routes/api'));
 
 // serve index: make sure this is the last route configured
-require('./routes').serveIndex(app, configServer.staticFolder);
+require('./lib/routes').serveIndex(app, configServer.staticFolder);
 
 // MongoDB connection
 mongoose.connect(configDb.uri, configDb.options, function (err, res) {
@@ -38,3 +38,5 @@ mongoose.connect(configDb.uri, configDb.options, function (err, res) {
 http.createServer(app).listen(app.get('port'), function () {
   console.log('HTTP server listening on port ' + app.get('port'));
 });
+
+module.exports.app = app;
