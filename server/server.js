@@ -11,7 +11,7 @@ var configDb = require('./lib/config/db')
 
 // app parameters
 var app = express();
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || configServer.defaultPort);
 app.use(express.static(configServer.staticFolder));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
