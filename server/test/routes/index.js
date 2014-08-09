@@ -1,7 +1,7 @@
 var request = require('supertest');
 
 describe('Route Index', function () {
-  var app = require('../server').app;
+  var app = require('../../server').app;
   
   it('should serve the index file', function (done) {
     request(app)

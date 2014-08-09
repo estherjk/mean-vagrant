@@ -2,7 +2,7 @@ var expect = require('chai').expect
   , request = require('supertest');
 
 describe('REST API', function () {
-  var app = require('../server').app;
+  var app = require('../../server').app;
   var id;
 
   it('should POST /api/users', function (done) {
