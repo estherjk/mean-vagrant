@@ -6,7 +6,7 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 
 # install initial packages
 sudo apt-get update
-sudo apt-get install -y build-essential python-software-properties git mongodb-10gen
+sudo apt-get install -y build-essential python-software-properties git mongodb-10gen libfontconfig
 
 # install latest version of node.js
 sudo add-apt-repository -y ppa:chris-lea/node.js
