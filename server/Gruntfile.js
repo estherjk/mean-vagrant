@@ -8,12 +8,17 @@ module.exports = function (grunt) {
         options: {
           reporter: 'spec'
         },
-        src: ['test/**/*.js']
+        src: ['lib/**/*.spec.js']
       }
     },
     watch: {
-      files: ['**/*'],
-      tasks: ['mochaTest'],
+      scripts: {
+        files: ['**/*'],
+        tasks: ['mochaTest'],
+        options: {
+          debounceDelay: 250
+        }
+      }
     }
   });
 
