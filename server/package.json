@@ -1,6 +1,6 @@
 {
   "name": "mean-vagrant-server",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": true,
   "dependencies": {
     "body-parser": "1.5.0",
