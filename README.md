@@ -36,7 +36,7 @@ The sample web application illustrates a scalable directory structure, a REST AP
 
 #### Installation tips when running npm install
 
-* If you receive an error prompting you to re-run command as root, try `sudo npm cache clean` first and re-run the command
+* If you receive an error prompting you to re-run the command as root, try `sudo npm cache clean` first and re-run the command
 * If you are running on Windows and receive an error related to creating symlinks on a Windows share, try `npm install --no-bin-links`
 
 ### Running the app
