@@ -12,8 +12,13 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['**/*'],
-      tasks: ['mochaTest']
+      scripts: {
+        files: ['**/*'],
+        tasks: ['mochaTest'],
+        options: {
+          debounceDelay: 250
+        }
+      }
     }
   });
 
