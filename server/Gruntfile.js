@@ -8,12 +8,12 @@ module.exports = function (grunt) {
         options: {
           reporter: 'spec'
         },
-        src: ['test/**/*.js']
+        src: ['lib/**/*.spec.js']
       }
     },
     watch: {
       files: ['**/*'],
-      tasks: ['mochaTest'],
+      tasks: ['mochaTest']
     }
   });
 
