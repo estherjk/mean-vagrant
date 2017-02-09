@@ -2,7 +2,7 @@
 
 An Ubuntu 12.04 Vagrant VM (64-bit) for developing web applications on the [MEAN](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and) stack.
 
-The sample web application illustrates a scalable directory structure, a REST API example, server-side unit testing with [Mocha](http://visionmedia.github.io/mocha/) & [Chai](http://chaijs.com/), and client-side unit testing with [Karma](http://karma-runner.github.io/) & [Jasmine](http://jasmine.github.io/).
+The sample web application illustrates a scalable directory structure, a REST API example, server-side unit testing with [Mocha](http://mochajs.org/) & [Chai](http://chaijs.com/), and client-side unit testing with [Karma](http://karma-runner.github.io/) & [Jasmine](http://jasmine.github.io/).
 
 ## Prerequisites
 
